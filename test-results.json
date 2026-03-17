@@ -1,0 +1,1220 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\playwright.config.js",
+    "rootDir": "C:/Users/LENOVO/Music/OneDrive/Pictures/distribution-agency-project/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/LENOVO/Music/OneDrive/Pictures/distribution-agency-project/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/LENOVO/Music/OneDrive/Pictures/distribution-agency-project/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "runAgents": "none",
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.58.2",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "admin.spec.js",
+      "file": "admin.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Admin Management Flow",
+          "file": "admin.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should manage inventory and view reports",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 15110,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\admin.spec.js:6:20",
+                        "location": {
+                          "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\admin.spec.js",
+                          "column": 20,
+                          "line": 6
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m     test(\u001b[32m'should manage inventory and view reports'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 5 |\u001b[39m         \u001b[90m// 1. Admin Login\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#email'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'admin@example.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#password'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'admin123'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclick(\u001b[32m'.login-button'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\admin.spec.js",
+                            "column": 20,
+                            "line": 6
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n\n  4 |     test('should manage inventory and view reports', async ({ page }) => {\n  5 |         // 1. Admin Login\n> 6 |         await page.goto('/login');\n    |                    ^\n  7 |         await page.fill('#email', 'admin@example.com');\n  8 |         await page.fill('#password', 'admin123');\n  9 |         await page.click('.login-button');\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\admin.spec.js:6:20"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-15T12:27:12.726Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\admin-Admin-Management-Flo-f57b1--inventory-and-view-reports-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\admin-Admin-Management-Flo-f57b1--inventory-and-view-reports-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\admin.spec.js",
+                        "column": 20,
+                        "line": 6
+                      }
+                    },
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 14065,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\admin.spec.js:6:20",
+                        "location": {
+                          "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\admin.spec.js",
+                          "column": 20,
+                          "line": 6
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m     test(\u001b[32m'should manage inventory and view reports'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 5 |\u001b[39m         \u001b[90m// 1. Admin Login\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#email'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'admin@example.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#password'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'admin123'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclick(\u001b[32m'.login-button'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\admin.spec.js",
+                            "column": 20,
+                            "line": 6
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n\n  4 |     test('should manage inventory and view reports', async ({ page }) => {\n  5 |         // 1. Admin Login\n> 6 |         await page.goto('/login');\n    |                    ^\n  7 |         await page.fill('#email', 'admin@example.com');\n  8 |         await page.fill('#password', 'admin123');\n  9 |         await page.click('.login-button');\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\admin.spec.js:6:20"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-03-15T12:27:36.230Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\admin-Admin-Management-Flo-f57b1--inventory-and-view-reports-chromium-retry1\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\admin-Admin-Management-Flo-f57b1--inventory-and-view-reports-chromium-retry1\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\admin.spec.js",
+                        "column": 20,
+                        "line": 6
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "73482573f1568b679d78-548d0f500b12de659b0e",
+              "file": "admin.spec.js",
+              "line": 4,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "enhanced-ux.spec.js",
+      "file": "enhanced-ux.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Enhanced UX: AI Search & Chat",
+          "file": "enhanced-ux.spec.js",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should perform AI visual search",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 14584,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\enhanced-ux.spec.js:7:20",
+                        "location": {
+                          "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\enhanced-ux.spec.js",
+                          "column": 20,
+                          "line": 7
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  5 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m  6 |\u001b[39m         \u001b[90m// Merchant Login\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  7 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  8 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#email'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'merchant@example.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m  9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#password'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'password123'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclick(\u001b[32m'.login-button'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\enhanced-ux.spec.js",
+                            "column": 20,
+                            "line": 7
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n\n   5 |     test.beforeEach(async ({ page }) => {\n   6 |         // Merchant Login\n>  7 |         await page.goto('/login');\n     |                    ^\n   8 |         await page.fill('#email', 'merchant@example.com');\n   9 |         await page.fill('#password', 'password123');\n  10 |         await page.click('.login-button');\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\enhanced-ux.spec.js:7:20"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-15T12:27:13.249Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\enhanced-ux-Enhanced-UX-AI-c6f7a-ld-perform-AI-visual-search-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\enhanced-ux-Enhanced-UX-AI-c6f7a-ld-perform-AI-visual-search-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\enhanced-ux.spec.js",
+                        "column": 20,
+                        "line": 7
+                      }
+                    },
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 14113,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\enhanced-ux.spec.js:7:20",
+                        "location": {
+                          "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\enhanced-ux.spec.js",
+                          "column": 20,
+                          "line": 7
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  5 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m  6 |\u001b[39m         \u001b[90m// Merchant Login\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  7 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  8 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#email'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'merchant@example.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m  9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#password'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'password123'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclick(\u001b[32m'.login-button'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\enhanced-ux.spec.js",
+                            "column": 20,
+                            "line": 7
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n\n   5 |     test.beforeEach(async ({ page }) => {\n   6 |         // Merchant Login\n>  7 |         await page.goto('/login');\n     |                    ^\n   8 |         await page.fill('#email', 'merchant@example.com');\n   9 |         await page.fill('#password', 'password123');\n  10 |         await page.click('.login-button');\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\enhanced-ux.spec.js:7:20"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-03-15T12:27:36.355Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\enhanced-ux-Enhanced-UX-AI-c6f7a-ld-perform-AI-visual-search-chromium-retry1\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\enhanced-ux-Enhanced-UX-AI-c6f7a-ld-perform-AI-visual-search-chromium-retry1\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\enhanced-ux.spec.js",
+                        "column": 20,
+                        "line": 7
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d0fc97a3f0a6bdf4d6c0-2099410fcf2ddf51a1a6",
+              "file": "enhanced-ux.spec.js",
+              "line": 13,
+              "column": 5
+            },
+            {
+              "title": "should send and receive real-time messages",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 15145,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\enhanced-ux.spec.js:7:20",
+                        "location": {
+                          "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\enhanced-ux.spec.js",
+                          "column": 20,
+                          "line": 7
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  5 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m  6 |\u001b[39m         \u001b[90m// Merchant Login\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  7 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  8 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#email'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'merchant@example.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m  9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#password'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'password123'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclick(\u001b[32m'.login-button'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\enhanced-ux.spec.js",
+                            "column": 20,
+                            "line": 7
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n\n   5 |     test.beforeEach(async ({ page }) => {\n   6 |         // Merchant Login\n>  7 |         await page.goto('/login');\n     |                    ^\n   8 |         await page.fill('#email', 'merchant@example.com');\n   9 |         await page.fill('#password', 'password123');\n  10 |         await page.click('.login-button');\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\enhanced-ux.spec.js:7:20"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-15T12:27:59.362Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\enhanced-ux-Enhanced-UX-AI-43e68--receive-real-time-messages-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\enhanced-ux-Enhanced-UX-AI-43e68--receive-real-time-messages-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\enhanced-ux.spec.js",
+                        "column": 20,
+                        "line": 7
+                      }
+                    },
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 14102,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\enhanced-ux.spec.js:7:20",
+                        "location": {
+                          "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\enhanced-ux.spec.js",
+                          "column": 20,
+                          "line": 7
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  5 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m  6 |\u001b[39m         \u001b[90m// Merchant Login\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  7 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  8 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#email'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'merchant@example.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m  9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#password'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'password123'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclick(\u001b[32m'.login-button'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\enhanced-ux.spec.js",
+                            "column": 20,
+                            "line": 7
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n\n   5 |     test.beforeEach(async ({ page }) => {\n   6 |         // Merchant Login\n>  7 |         await page.goto('/login');\n     |                    ^\n   8 |         await page.fill('#email', 'merchant@example.com');\n   9 |         await page.fill('#password', 'password123');\n  10 |         await page.click('.login-button');\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\enhanced-ux.spec.js:7:20"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-03-15T12:28:22.645Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\enhanced-ux-Enhanced-UX-AI-43e68--receive-real-time-messages-chromium-retry1\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\enhanced-ux-Enhanced-UX-AI-43e68--receive-real-time-messages-chromium-retry1\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\enhanced-ux.spec.js",
+                        "column": 20,
+                        "line": 7
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d0fc97a3f0a6bdf4d6c0-9127713c7bf470beb063",
+              "file": "enhanced-ux.spec.js",
+              "line": 26,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "finance-and-rewards.spec.js",
+      "file": "finance-and-rewards.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Finance & Rewards: Wallet & Salary",
+          "file": "finance-and-rewards.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should manage wallet and initiate recharge",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 15219,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\finance-and-rewards.spec.js:6:20",
+                        "location": {
+                          "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\finance-and-rewards.spec.js",
+                          "column": 20,
+                          "line": 6
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 5 |\u001b[39m         \u001b[90m// Merchant Login\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#email'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'merchant@example.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#password'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'password123'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclick(\u001b[32m'.login-button'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\finance-and-rewards.spec.js",
+                            "column": 20,
+                            "line": 6
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n\n  4 |     test.beforeEach(async ({ page }) => {\n  5 |         // Merchant Login\n> 6 |         await page.goto('/login');\n    |                    ^\n  7 |         await page.fill('#email', 'merchant@example.com');\n  8 |         await page.fill('#password', 'password123');\n  9 |         await page.click('.login-button');\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\finance-and-rewards.spec.js:6:20"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-15T12:27:59.108Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\finance-and-rewards-Financ-4ea49-allet-and-initiate-recharge-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\finance-and-rewards-Financ-4ea49-allet-and-initiate-recharge-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\finance-and-rewards.spec.js",
+                        "column": 20,
+                        "line": 6
+                      }
+                    },
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 14233,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\finance-and-rewards.spec.js:6:20",
+                        "location": {
+                          "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\finance-and-rewards.spec.js",
+                          "column": 20,
+                          "line": 6
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 5 |\u001b[39m         \u001b[90m// Merchant Login\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#email'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'merchant@example.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#password'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'password123'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclick(\u001b[32m'.login-button'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\finance-and-rewards.spec.js",
+                            "column": 20,
+                            "line": 6
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n\n  4 |     test.beforeEach(async ({ page }) => {\n  5 |         // Merchant Login\n> 6 |         await page.goto('/login');\n    |                    ^\n  7 |         await page.fill('#email', 'merchant@example.com');\n  8 |         await page.fill('#password', 'password123');\n  9 |         await page.click('.login-button');\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\finance-and-rewards.spec.js:6:20"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-03-15T12:28:22.484Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\finance-and-rewards-Financ-4ea49-allet-and-initiate-recharge-chromium-retry1\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\finance-and-rewards-Financ-4ea49-allet-and-initiate-recharge-chromium-retry1\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\finance-and-rewards.spec.js",
+                        "column": 20,
+                        "line": 6
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "3238d287ac7168dd8707-49cf22d87bf2e8a9c530",
+              "file": "finance-and-rewards.spec.js",
+              "line": 12,
+              "column": 5
+            },
+            {
+              "title": "should permit admin to review and pay salary",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 14091,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\finance-and-rewards.spec.js:6:20",
+                        "location": {
+                          "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\finance-and-rewards.spec.js",
+                          "column": 20,
+                          "line": 6
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 5 |\u001b[39m         \u001b[90m// Merchant Login\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#email'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'merchant@example.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#password'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'password123'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclick(\u001b[32m'.login-button'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\finance-and-rewards.spec.js",
+                            "column": 20,
+                            "line": 6
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n\n  4 |     test.beforeEach(async ({ page }) => {\n  5 |         // Merchant Login\n> 6 |         await page.goto('/login');\n    |                    ^\n  7 |         await page.fill('#email', 'merchant@example.com');\n  8 |         await page.fill('#password', 'password123');\n  9 |         await page.click('.login-button');\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\finance-and-rewards.spec.js:6:20"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-15T12:28:45.353Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\finance-and-rewards-Financ-868c3-in-to-review-and-pay-salary-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\finance-and-rewards-Financ-868c3-in-to-review-and-pay-salary-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\finance-and-rewards.spec.js",
+                        "column": 20,
+                        "line": 6
+                      }
+                    },
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 14467,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\finance-and-rewards.spec.js:6:20",
+                        "location": {
+                          "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\finance-and-rewards.spec.js",
+                          "column": 20,
+                          "line": 6
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 5 |\u001b[39m         \u001b[90m// Merchant Login\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#email'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'merchant@example.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#password'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'password123'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclick(\u001b[32m'.login-button'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\finance-and-rewards.spec.js",
+                            "column": 20,
+                            "line": 6
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n\n  4 |     test.beforeEach(async ({ page }) => {\n  5 |         // Merchant Login\n> 6 |         await page.goto('/login');\n    |                    ^\n  7 |         await page.fill('#email', 'merchant@example.com');\n  8 |         await page.fill('#password', 'password123');\n  9 |         await page.click('.login-button');\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\finance-and-rewards.spec.js:6:20"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-03-15T12:29:07.879Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\finance-and-rewards-Financ-868c3-in-to-review-and-pay-salary-chromium-retry1\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\finance-and-rewards-Financ-868c3-in-to-review-and-pay-salary-chromium-retry1\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\finance-and-rewards.spec.js",
+                        "column": 20,
+                        "line": 6
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "3238d287ac7168dd8707-00ce34036ff1b22997f4",
+              "file": "finance-and-rewards.spec.js",
+              "line": 27,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hardware-integration.spec.js",
+      "file": "hardware-integration.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Hardware Integration: RFID & GPS",
+          "file": "hardware-integration.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should verify RFID attendance updates",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 14067,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\hardware-integration.spec.js:6:20",
+                        "location": {
+                          "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\hardware-integration.spec.js",
+                          "column": 20,
+                          "line": 6
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 5 |\u001b[39m         \u001b[90m// Admin Login\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#email'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'admin@example.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#password'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'admin123'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclick(\u001b[32m'.login-button'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\hardware-integration.spec.js",
+                            "column": 20,
+                            "line": 6
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n\n  4 |     test.beforeEach(async ({ page }) => {\n  5 |         // Admin Login\n> 6 |         await page.goto('/login');\n    |                    ^\n  7 |         await page.fill('#email', 'admin@example.com');\n  8 |         await page.fill('#password', 'admin123');\n  9 |         await page.click('.login-button');\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\hardware-integration.spec.js:6:20"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-15T12:28:45.500Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\hardware-integration-Hardw-bd1fa-ify-RFID-attendance-updates-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\hardware-integration-Hardw-bd1fa-ify-RFID-attendance-updates-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\hardware-integration.spec.js",
+                        "column": 20,
+                        "line": 6
+                      }
+                    },
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 14378,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\hardware-integration.spec.js:6:20",
+                        "location": {
+                          "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\hardware-integration.spec.js",
+                          "column": 20,
+                          "line": 6
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 5 |\u001b[39m         \u001b[90m// Admin Login\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#email'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'admin@example.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#password'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'admin123'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclick(\u001b[32m'.login-button'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\hardware-integration.spec.js",
+                            "column": 20,
+                            "line": 6
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n\n  4 |     test.beforeEach(async ({ page }) => {\n  5 |         // Admin Login\n> 6 |         await page.goto('/login');\n    |                    ^\n  7 |         await page.fill('#email', 'admin@example.com');\n  8 |         await page.fill('#password', 'admin123');\n  9 |         await page.click('.login-button');\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\hardware-integration.spec.js:6:20"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-03-15T12:29:08.106Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\hardware-integration-Hardw-bd1fa-ify-RFID-attendance-updates-chromium-retry1\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\hardware-integration-Hardw-bd1fa-ify-RFID-attendance-updates-chromium-retry1\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\hardware-integration.spec.js",
+                        "column": 20,
+                        "line": 6
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "8f1e96186a682d4ee82b-e3a889a0a880636f7bdd",
+              "file": "hardware-integration.spec.js",
+              "line": 12,
+              "column": 5
+            },
+            {
+              "title": "should view live GPS tracking",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 13,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 13533,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\hardware-integration.spec.js:6:20",
+                        "location": {
+                          "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\hardware-integration.spec.js",
+                          "column": 20,
+                          "line": 6
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 5 |\u001b[39m         \u001b[90m// Admin Login\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#email'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'admin@example.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#password'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'admin123'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclick(\u001b[32m'.login-button'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\hardware-integration.spec.js",
+                            "column": 20,
+                            "line": 6
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n\n  4 |     test.beforeEach(async ({ page }) => {\n  5 |         // Admin Login\n> 6 |         await page.goto('/login');\n    |                    ^\n  7 |         await page.fill('#email', 'admin@example.com');\n  8 |         await page.fill('#password', 'admin123');\n  9 |         await page.click('.login-button');\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\hardware-integration.spec.js:6:20"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-15T12:29:30.126Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\hardware-integration-Hardw-7e27d-ould-view-live-GPS-tracking-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\hardware-integration-Hardw-7e27d-ould-view-live-GPS-tracking-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\hardware-integration.spec.js",
+                        "column": 20,
+                        "line": 6
+                      }
+                    },
+                    {
+                      "workerIndex": 15,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 13649,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\hardware-integration.spec.js:6:20",
+                        "location": {
+                          "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\hardware-integration.spec.js",
+                          "column": 20,
+                          "line": 6
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 5 |\u001b[39m         \u001b[90m// Admin Login\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#email'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'admin@example.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#password'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'admin123'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclick(\u001b[32m'.login-button'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\hardware-integration.spec.js",
+                            "column": 20,
+                            "line": 6
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n\n  4 |     test.beforeEach(async ({ page }) => {\n  5 |         // Admin Login\n> 6 |         await page.goto('/login');\n    |                    ^\n  7 |         await page.fill('#email', 'admin@example.com');\n  8 |         await page.fill('#password', 'admin123');\n  9 |         await page.click('.login-button');\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\hardware-integration.spec.js:6:20"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-03-15T12:29:50.991Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\hardware-integration-Hardw-7e27d-ould-view-live-GPS-tracking-chromium-retry1\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\hardware-integration-Hardw-7e27d-ould-view-live-GPS-tracking-chromium-retry1\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\hardware-integration.spec.js",
+                        "column": 20,
+                        "line": 6
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "8f1e96186a682d4ee82b-6305115cefe799bbbfc9",
+              "file": "hardware-integration.spec.js",
+              "line": 27,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "merchant.spec.js",
+      "file": "merchant.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Merchant User Flow",
+          "file": "merchant.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should login and browse products",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 12,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 13606,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\merchant.spec.js:6:20",
+                        "location": {
+                          "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\merchant.spec.js",
+                          "column": 20,
+                          "line": 6
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m     test(\u001b[32m'should login and browse products'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 5 |\u001b[39m         \u001b[90m// 1. Navigate to Login\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m         \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/Cochin Distributors/i\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m\n \u001b[90m 9 |\u001b[39m         \u001b[90m// 2. Perform Login\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\merchant.spec.js",
+                            "column": 20,
+                            "line": 6
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n\n  4 |     test('should login and browse products', async ({ page }) => {\n  5 |         // 1. Navigate to Login\n> 6 |         await page.goto('/login');\n    |                    ^\n  7 |         await expect(page).toHaveTitle(/Cochin Distributors/i);\n  8 |\n  9 |         // 2. Perform Login\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\merchant.spec.js:6:20"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-15T12:29:29.913Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\merchant-Merchant-User-Flow-should-login-and-browse-products-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\merchant-Merchant-User-Flow-should-login-and-browse-products-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\merchant.spec.js",
+                        "column": 20,
+                        "line": 6
+                      }
+                    },
+                    {
+                      "workerIndex": 14,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 13682,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\merchant.spec.js:6:20",
+                        "location": {
+                          "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\merchant.spec.js",
+                          "column": 20,
+                          "line": 6
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m     test(\u001b[32m'should login and browse products'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 5 |\u001b[39m         \u001b[90m// 1. Navigate to Login\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m         \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/Cochin Distributors/i\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m\n \u001b[90m 9 |\u001b[39m         \u001b[90m// 2. Perform Login\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\merchant.spec.js",
+                            "column": 20,
+                            "line": 6
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n\n  4 |     test('should login and browse products', async ({ page }) => {\n  5 |         // 1. Navigate to Login\n> 6 |         await page.goto('/login');\n    |                    ^\n  7 |         await expect(page).toHaveTitle(/Cochin Distributors/i);\n  8 |\n  9 |         // 2. Perform Login\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\merchant.spec.js:6:20"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-03-15T12:29:50.895Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\merchant-Merchant-User-Flow-should-login-and-browse-products-chromium-retry1\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\merchant-Merchant-User-Flow-should-login-and-browse-products-chromium-retry1\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\merchant.spec.js",
+                        "column": 20,
+                        "line": 6
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "6816974b0fd53d16f8af-2bf2316fd5732d46741b",
+              "file": "merchant.spec.js",
+              "line": 4,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "staff.spec.js",
+      "file": "staff.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Staff Attendance & Delivery Flow",
+          "file": "staff.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should record attendance and update delivery status",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 16,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 13124,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\staff.spec.js:6:20",
+                        "location": {
+                          "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\staff.spec.js",
+                          "column": 20,
+                          "line": 6
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m     test(\u001b[32m'should record attendance and update delivery status'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 5 |\u001b[39m         \u001b[90m// 1. Staff Login\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#email'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'staff@example.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#password'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'staff123'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclick(\u001b[32m'.login-button'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\staff.spec.js",
+                            "column": 20,
+                            "line": 6
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n\n  4 |     test('should record attendance and update delivery status', async ({ page }) => {\n  5 |         // 1. Staff Login\n> 6 |         await page.goto('/login');\n    |                    ^\n  7 |         await page.fill('#email', 'staff@example.com');\n  8 |         await page.fill('#password', 'staff123');\n  9 |         await page.click('.login-button');\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\staff.spec.js:6:20"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-15T12:30:11.086Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\staff-Staff-Attendance-Del-dba85--and-update-delivery-status-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\staff-Staff-Attendance-Del-dba85--and-update-delivery-status-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\staff.spec.js",
+                        "column": 20,
+                        "line": 6
+                      }
+                    },
+                    {
+                      "workerIndex": 17,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 12269,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\staff.spec.js:6:20",
+                        "location": {
+                          "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\staff.spec.js",
+                          "column": 20,
+                          "line": 6
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m     test(\u001b[32m'should record attendance and update delivery status'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 5 |\u001b[39m         \u001b[90m// 1. Staff Login\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#email'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'staff@example.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'#password'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'staff123'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclick(\u001b[32m'.login-button'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\staff.spec.js",
+                            "column": 20,
+                            "line": 6
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8080/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8080/login\", waiting until \"load\"\u001b[22m\n\n\n  4 |     test('should record attendance and update delivery status', async ({ page }) => {\n  5 |         // 1. Staff Login\n> 6 |         await page.goto('/login');\n    |                    ^\n  7 |         await page.fill('#email', 'staff@example.com');\n  8 |         await page.fill('#password', 'staff123');\n  9 |         await page.click('.login-button');\n    at C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\staff.spec.js:6:20"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-03-15T12:30:31.242Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\staff-Staff-Attendance-Del-dba85--and-update-delivery-status-chromium-retry1\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\test-results\\staff-Staff-Attendance-Del-dba85--and-update-delivery-status-chromium-retry1\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\LENOVO\\Music\\OneDrive\\Pictures\\distribution-agency-project\\tests\\staff.spec.js",
+                        "column": 20,
+                        "line": 6
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "1205aff6f7e14ab00309-a54b2193e493bfa4215b",
+              "file": "staff.spec.js",
+              "line": 4,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-03-15T12:27:07.969Z",
+    "duration": 218485.527,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 9,
+    "flaky": 0
+  }
+}

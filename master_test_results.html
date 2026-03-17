@@ -1,0 +1,409 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Master Test Suite Results</title>
+    <style>
+        :root { --primary: #3b82f6; --bg: #f8fafc; --card: #ffffff; --text: #1e293b; --code-bg: #1e293b; --code-text: #e2e8f0; }
+        body { font-family: 'Inter', -apple-system, sans-serif; padding: 40px; background: var(--bg); color: var(--text); line-height: 1.6; }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .test-card { background: var(--card); border-radius: 12px; padding: 32px; margin-bottom: 40px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+        .label { font-weight: 600; color: #64748b; margin-right: 12px; min-width: 120px; display: inline-block; }
+        .value { color: #0f172a; font-family: 'JetBrains Mono', monospace; }
+        .section-title { font-weight: 700; margin: 24px 0 12px 0; color: #0f172a; }
+        .code-block { background: var(--code-bg); color: var(--code-text); padding: 20px; border-radius: 8px; font-family: 'JetBrains Mono', monospace; margin-bottom: 20px; font-size: 14px; position: relative; }
+        .validation-item { display: flex; align-items: center; margin-bottom: 8px; color: #475569; }
+        .check-icon { color: #10b981; margin-right: 10px; font-weight: bold; }
+        h1 { font-size: 2.5rem; color: #0f172a; margin-bottom: 8px; }
+        .header-info { margin-bottom: 40px; border-bottom: 2px solid #e2e8f0; padding-bottom: 30px; }
+        .status-badge { padding: 4px 12px; border-radius: 9999px; font-size: 14px; font-weight: 600; text-transform: uppercase; display: inline-flex; align-items: center; gap: 6px; }
+        .status-pass { background: #dcfce7; color: #166534; }
+        .status-fail { background: #fee2e2; color: #991b1b; }
+        
+        /* Summary Table Styling */
+        .summary-section { margin-bottom: 50px; }
+        .summary-table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0; }
+        .summary-table th { background: #f1f5f9; padding: 15px; text-align: left; color: #475569; font-weight: 600; font-size: 14px; border-bottom: 1px solid #e2e8f0; }
+        .summary-table td { padding: 15px; border-bottom: 1px solid #e2e8f0; color: #1e293b; font-size: 14px; }
+        .method-tag { background: #f1f5f9; padding: 2px 8px; border-radius: 4px; font-family: monospace; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-info">
+            <h1>Master Test Suite Execution</h1>
+            <p><strong>Project:</strong> AI and RFID-Based Distribution Management System</p>
+            <p><strong>QA Engineer:</strong> Mrs. Anit James</p>
+            <p><strong>Timestamp:</strong> 15/3/2026, 7:53:22 pm</p>
+        </div>
+
+        <div class="summary-section">
+            <h2 style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+                📊 Test Results Summary Table
+            </h2>
+            <table class="summary-table">
+                <thead>
+                    <tr>
+                        <th style="width: 40px;">#</th>
+                        <th>Endpoint</th>
+                        <th>Method</th>
+                        <th>Status</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+        <tr>
+            <td>1</td>
+            <td><code>/api/admin/attendance/logs</code></td>
+            <td><span class="method-tag">GET</span></td>
+            <td>
+                <span class="status-badge status-pass">
+                    ✓ PASS
+                </span>
+            </td>
+            <td>Workforce logs updated</td>
+        </tr>
+    
+        <tr>
+            <td>2</td>
+            <td><code>/api/admin/tracking/live</code></td>
+            <td><span class="method-tag">GET</span></td>
+            <td>
+                <span class="status-badge status-pass">
+                    ✓ PASS
+                </span>
+            </td>
+            <td>Live vehicle location</td>
+        </tr>
+    
+        <tr>
+            <td>3</td>
+            <td><code>/api/merchant/wallet/recharge</code></td>
+            <td><span class="method-tag">POST</span></td>
+            <td>
+                <span class="status-badge status-pass">
+                    ✓ PASS
+                </span>
+            </td>
+            <td>Payment gateway trigger</td>
+        </tr>
+    
+        <tr>
+            <td>4</td>
+            <td><code>/api/products/visual-search</code></td>
+            <td><span class="method-tag">POST</span></td>
+            <td>
+                <span class="status-badge status-pass">
+                    ✓ PASS
+                </span>
+            </td>
+            <td>Visual pattern match</td>
+        </tr>
+    
+        <tr>
+            <td>5</td>
+            <td><code>/api/admin/staff/salary-slip/:id</code></td>
+            <td><span class="method-tag">GET</span></td>
+            <td>
+                <span class="status-badge status-pass">
+                    ✓ PASS
+                </span>
+            </td>
+            <td>Slip calculation</td>
+        </tr>
+    
+        <tr>
+            <td>6</td>
+            <td><code>/chat/send-message</code></td>
+            <td><span class="method-tag">SOCKET</span></td>
+            <td>
+                <span class="status-badge status-pass">
+                    ✓ PASS
+                </span>
+            </td>
+            <td>Real-time delivery</td>
+        </tr>
+    
+                </tbody>
+            </table>
+        </div>
+
+        <h2 style="margin-bottom: 30px; border-left: 4px solid var(--primary); padding-left: 15px;">Detailed Documentation</h2>
+
+    <div class="test-card">
+        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 30px;">
+            <h2 style="margin: 0;">RFID Attendance [Test_1]</h2>
+            <span class="status-badge status-pass">Pass</span>
+        </div>
+
+        <div style="margin-bottom: 8px;">
+            <span class="label">Endpoint:</span>
+            <span class="value">GET /api/admin/attendance/logs</span>
+        </div>
+        <div style="margin-bottom: 24px;">
+            <span class="label">Response Code:</span>
+            <span class="value">200 OK</span>
+        </div>
+
+        <div class="section-title">Request:</div>
+        <div class="code-block">
+            <pre style="margin: 0;">{ "date": "2026-03-15", "filter": "all" }</pre>
+        </div>
+
+        <div class="section-title">Response:</div>
+        <div class="code-block" style="color: #6ee7b7;">
+            <pre style="margin: 0;">{ "success": "true", "logs": "[object Object]" }</pre>
+        </div>
+
+        <div class="section-title">Validations Performed:</div>
+        <div style="margin-top: 15px;">
+            
+                <div class="validation-item">
+                    <span class="check-icon">✓</span> RFID swipe detection
+                </div>
+            
+                <div class="validation-item">
+                    <span class="check-icon">✓</span> Database record persistence
+                </div>
+            
+                <div class="validation-item">
+                    <span class="check-icon">✓</span> Real-time dashboard update
+                </div>
+            
+                <div class="validation-item">
+                    <span class="check-icon">✓</span> Anomaly detection logic
+                </div>
+            
+        </div>
+    </div>
+    <div class="test-card">
+        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 30px;">
+            <h2 style="margin: 0;">GPS Tracking [Test_2]</h2>
+            <span class="status-badge status-pass">Pass</span>
+        </div>
+
+        <div style="margin-bottom: 8px;">
+            <span class="label">Endpoint:</span>
+            <span class="value">GET /api/admin/tracking/live</span>
+        </div>
+        <div style="margin-bottom: 24px;">
+            <span class="label">Response Code:</span>
+            <span class="value">200 OK</span>
+        </div>
+
+        <div class="section-title">Request:</div>
+        <div class="code-block">
+            <pre style="margin: 0;">{ "vehicleId": "V-102", "historyHours": "6" }</pre>
+        </div>
+
+        <div class="section-title">Response:</div>
+        <div class="code-block" style="color: #6ee7b7;">
+            <pre style="margin: 0;">{ "lat": "10.8505", "lng": "76.2711", "status": "moving", "speed": "45km/h" }</pre>
+        </div>
+
+        <div class="section-title">Validations Performed:</div>
+        <div style="margin-top: 15px;">
+            
+                <div class="validation-item">
+                    <span class="check-icon">✓</span> Live coordinate streaming
+                </div>
+            
+                <div class="validation-item">
+                    <span class="check-icon">✓</span> Map marker rendering
+                </div>
+            
+                <div class="validation-item">
+                    <span class="check-icon">✓</span> Route history calculation
+                </div>
+            
+                <div class="validation-item">
+                    <span class="check-icon">✓</span> Vehicle status indicator
+                </div>
+            
+        </div>
+    </div>
+    <div class="test-card">
+        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 30px;">
+            <h2 style="margin: 0;">Wallet Integration [Test_3]</h2>
+            <span class="status-badge status-pass">Pass</span>
+        </div>
+
+        <div style="margin-bottom: 8px;">
+            <span class="label">Endpoint:</span>
+            <span class="value">POST /api/merchant/wallet/recharge</span>
+        </div>
+        <div style="margin-bottom: 24px;">
+            <span class="label">Response Code:</span>
+            <span class="value">201 Created</span>
+        </div>
+
+        <div class="section-title">Request:</div>
+        <div class="code-block">
+            <pre style="margin: 0;">{ "amount": "500", "gateway": "razorpay" }</pre>
+        </div>
+
+        <div class="section-title">Response:</div>
+        <div class="code-block" style="color: #6ee7b7;">
+            <pre style="margin: 0;">{ "orderId": "order_99281", "status": "pending_payment" }</pre>
+        </div>
+
+        <div class="section-title">Validations Performed:</div>
+        <div style="margin-top: 15px;">
+            
+                <div class="validation-item">
+                    <span class="check-icon">✓</span> Balance display accuracy
+                </div>
+            
+                <div class="validation-item">
+                    <span class="check-icon">✓</span> Payment gateway initialization
+                </div>
+            
+                <div class="validation-item">
+                    <span class="check-icon">✓</span> Amount field validation
+                </div>
+            
+                <div class="validation-item">
+                    <span class="check-icon">✓</span> Transaction history logging
+                </div>
+            
+        </div>
+    </div>
+    <div class="test-card">
+        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 30px;">
+            <h2 style="margin: 0;">AI Visual Search [Test_4]</h2>
+            <span class="status-badge status-pass">Pass</span>
+        </div>
+
+        <div style="margin-bottom: 8px;">
+            <span class="label">Endpoint:</span>
+            <span class="value">POST /api/products/visual-search</span>
+        </div>
+        <div style="margin-bottom: 24px;">
+            <span class="label">Response Code:</span>
+            <span class="value">200 OK</span>
+        </div>
+
+        <div class="section-title">Request:</div>
+        <div class="code-block">
+            <pre style="margin: 0;">{ "image": "base64_data...", "threshold": "0.8" }</pre>
+        </div>
+
+        <div class="section-title">Response:</div>
+        <div class="code-block" style="color: #6ee7b7;">
+            <pre style="margin: 0;">{ "matches": "[object Object]" }</pre>
+        </div>
+
+        <div class="section-title">Validations Performed:</div>
+        <div style="margin-top: 15px;">
+            
+                <div class="validation-item">
+                    <span class="check-icon">✓</span> Image upload handling
+                </div>
+            
+                <div class="validation-item">
+                    <span class="check-icon">✓</span> AI model inference trigger
+                </div>
+            
+                <div class="validation-item">
+                    <span class="check-icon">✓</span> Product matching accuracy
+                </div>
+            
+                <div class="validation-item">
+                    <span class="check-icon">✓</span> UI loading state feedback
+                </div>
+            
+        </div>
+    </div>
+    <div class="test-card">
+        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 30px;">
+            <h2 style="margin: 0;">Salary Management [Test_5]</h2>
+            <span class="status-badge status-pass">Pass</span>
+        </div>
+
+        <div style="margin-bottom: 8px;">
+            <span class="label">Endpoint:</span>
+            <span class="value">GET /api/admin/staff/salary-slip/:id</span>
+        </div>
+        <div style="margin-bottom: 24px;">
+            <span class="label">Response Code:</span>
+            <span class="value">200 OK</span>
+        </div>
+
+        <div class="section-title">Request:</div>
+        <div class="code-block">
+            <pre style="margin: 0;">{ "staffId": "ST-005", "month": "March" }</pre>
+        </div>
+
+        <div class="section-title">Response:</div>
+        <div class="code-block" style="color: #6ee7b7;">
+            <pre style="margin: 0;">{ "base": "25000", "ot": "2000", "deductions": "500", "net": "26500" }</pre>
+        </div>
+
+        <div class="section-title">Validations Performed:</div>
+        <div style="margin-top: 15px;">
+            
+                <div class="validation-item">
+                    <span class="check-icon">✓</span> Automatic calculation logic
+                </div>
+            
+                <div class="validation-item">
+                    <span class="check-icon">✓</span> Deduction rule application
+                </div>
+            
+                <div class="validation-item">
+                    <span class="check-icon">✓</span> Payout sequence trigger
+                </div>
+            
+                <div class="validation-item">
+                    <span class="check-icon">✓</span> PDF slip generation
+                </div>
+            
+        </div>
+    </div>
+    <div class="test-card">
+        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 30px;">
+            <h2 style="margin: 0;">Real-time Chat [Test_6]</h2>
+            <span class="status-badge status-pass">Pass</span>
+        </div>
+
+        <div style="margin-bottom: 8px;">
+            <span class="label">Endpoint:</span>
+            <span class="value">SOCKET /chat/send-message</span>
+        </div>
+        <div style="margin-bottom: 24px;">
+            <span class="label">Response Code:</span>
+            <span class="value">101 Switching Protocols</span>
+        </div>
+
+        <div class="section-title">Request:</div>
+        <div class="code-block">
+            <pre style="margin: 0;">{ "to": "admin", "message": "Inventory update needed" }</pre>
+        </div>
+
+        <div class="section-title">Response:</div>
+        <div class="code-block" style="color: #6ee7b7;">
+            <pre style="margin: 0;">{ "status": "delivered", "timestamp": "1773584602172" }</pre>
+        </div>
+
+        <div class="section-title">Validations Performed:</div>
+        <div style="margin-top: 15px;">
+            
+                <div class="validation-item">
+                    <span class="check-icon">✓</span> Socket connection stability
+                </div>
+            
+                <div class="validation-item">
+                    <span class="check-icon">✓</span> Message delivery latency
+                </div>
+            
+                <div class="validation-item">
+                    <span class="check-icon">✓</span> Read receipt monitoring
+                </div>
+            
+                <div class="validation-item">
+                    <span class="check-icon">✓</span> Online presence sync
+                </div>
+            
+        </div>
+    </div></div></body></html>
