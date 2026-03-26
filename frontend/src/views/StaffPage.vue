@@ -240,9 +240,30 @@
           </div>
         </div>
 
-        <div v-if="currentTab === 'items'" class="white-box">
-          <h2>Manage Items</h2>
-          <p>👉 Here you can add, update, or delete items.</p>
+        <div v-if="currentTab === 'items'" class="white-box no-pad">
+          <ProductList @edit="openEditProductModal" />
+        </div>
+
+        <!-- Edit Product Modal -->
+        <div
+          v-if="showEditProductModal"
+          class="modal-backdrop"
+          @click="showEditProductModal = false"
+        >
+          <div class="modal-panel" @click.stop>
+            <div class="modal-header">
+              <h3>Edit Product</h3>
+              <button class="close-btn" @click="showEditProductModal = false">
+                ×
+              </button>
+            </div>
+            <div class="modal-body">
+              <ProductEdit
+                :product-id="editProductId"
+                @updated="handleProductUpdated"
+              />
+            </div>
+          </div>
         </div>
 
         <div v-if="currentTab === 'apply-leave'" class="white-box">
@@ -311,11 +332,13 @@
 import axios from "@/utils/axios";
 import StaffLeave from "./StaffLeave.vue";
 import ChatWindow from "./ChatWindow.vue";
+import ProductList from "@/views/ProductList.vue";
+import ProductEdit from "@/views/ProductEdit.vue";
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
 
 export default {
-  components: { StaffLeave, ChatWindow },
+  components: { StaffLeave, ChatWindow, ProductList, ProductEdit },
   data() {
     return {
       currentTab: "dashboard",
@@ -348,6 +371,8 @@ export default {
       showEditProfile: false,
       unreadMessageCount: 0,
       messageInterval: null,
+      showEditProductModal: false,
+      editProductId: null,
     };
   },
   methods: {
@@ -482,6 +507,14 @@ export default {
         ],
       });
       doc.save(`${this.staff.name}_Experience_Certificate.pdf`);
+    },
+    openEditProductModal(productId) {
+      this.editProductId = productId;
+      this.showEditProductModal = true;
+    },
+    handleProductUpdated() {
+      this.showEditProductModal = false;
+      this.fetchStats();
     },
   },
   watch: {
@@ -972,5 +1005,54 @@ export default {
 
 @media (max-width: 640px) {
   .gradient-cards-grid, .white-cards-grid { grid-template-columns: 1fr; }
+}
+
+/* Modal styles for Edit Product */
+.modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(8px);
+  display: flex; justify-content: center; align-items: center;
+  z-index: 1000;
+}
+
+.modal-panel {
+  background: white;
+  border-radius: 24px;
+  width: 90%; max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  padding: 24px 32px;
+  border-bottom: 1px solid #f1f5f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  line-height: 1;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 32px;
 }
 </style>
