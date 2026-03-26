@@ -213,19 +213,11 @@
         </div>
       </div>
 
-      <div class="dining-selectors">
-        <select class="order-select">
-          <option>Select Dining</option>
-        </select>
-        <select class="order-select">
-          <option>Select Table</option>
-        </select>
-      </div>
 
       <div class="current-order-section">
         <div class="order-id-row">
           <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-          <strong>Order #20</strong>
+          <strong>Order #{{ orderCount + 1 }}</strong>
         </div>
 
         <div class="order-items-list">
@@ -441,6 +433,7 @@ export default {
       userProfile: null,
       visualSearchLoading: false,
       isAiSearch: false,
+      orderCount: 0,
     };
   },
   computed: {
@@ -477,6 +470,7 @@ export default {
     this.fetchCart();
     this.fetchWalletBalance();
     this.fetchUserProfile();
+    this.fetchOrderCount();
     this.loadRazorpay();
 
     const userStr = localStorage.getItem("user");
@@ -613,6 +607,18 @@ export default {
         localStorage.removeItem("token");
         localStorage.removeItem("user");
         this.$router.push("/login");
+      }
+    },
+    async fetchOrderCount() {
+      try {
+        const token = localStorage.getItem("token");
+        if (!token) return;
+        const res = await axios.get("/api/orders/my-orders");
+        if (res.data && Array.isArray(res.data)) {
+          this.orderCount = res.data.length;
+        }
+      } catch (err) {
+        console.error("Error fetching order count:", err);
       }
     },
     async fetchWalletBalance() {
@@ -755,6 +761,7 @@ export default {
       this.scratchCardOrderId = orderId;
       this.showScratchCard = true;
       this.selectedPaymentMethod = null;
+      this.orderCount++;
     },
     handleRevealFromList(orderId, isRevealed, amount) {
       this.scratchCardOrderId = orderId;
